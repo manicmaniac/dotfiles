@@ -1,0 +1,10 @@
+# Change file extensions recursively in current directory
+#
+#   change-extension erb haml
+
+function change-extension() {
+  for f in **/*.$1
+  do
+    mv $f ${f##*.}.$2
+  done
+}

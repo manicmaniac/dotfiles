@@ -1,0 +1,153 @@
+# plugin
+[[plugins]]
+repository = 'Shougo/vimproc.vim'
+
+	[[plugins.build]]
+	windows = 'tools\\update-dll-migw'
+	cygwin = 'make'
+	mac = 'make'
+	unix = 'make'
+
+[[plugins]]
+repository = 'Shougo/neocomplcache.vim'
+depends = 'Shougo/vimproc.vim'
+insert = 1
+
+[[plugins]]
+repository = 'Shougo/neosnippet.vim'
+depends = 'Shougo/neosnippet-snippets'
+insert = 1
+filetypes = 'snippet'
+
+[[plugins]]
+repository = 'tpope/vim-surround'
+
+[[plugins]]
+repository = 'thinca/vim-quickrun'
+depends = 'Shougo/vimproc.vim'
+mappings = '<Plug>'
+
+[[plugins]]
+repository = 'thinca/vim-ref'
+
+[[plugins]]
+repository = 'thinca/vim-visualstar'
+
+[[plugins]]
+repository = 'itchyny/lightline.vim'
+
+[[plugins]]
+repository = 'mattn/emmet-vim'
+
+[[plugins]]
+repository = 'Align'
+
+[[plugins]]
+repository = 'matchit.zip'
+mappings = ['%', 'g%']
+
+[[plugins]]
+repository = 'bkad/CamelCaseMotion'
+mappings = '<Plug>'
+
+[[plugins]]
+repository = 'ciaranm/detectindent'
+
+[[plugins]]
+repository = 'thinca/vim-template'
+
+[[plugins]]
+repository = 'vim-jp/vimdoc-ja'
+filetypes = 'help'
+
+[[plugins]]
+repository = 'manicmaniac/ftcompl'
+
+[[plugins]]
+repository = 'rking/ag.vim'
+external_commands = 'ag'
+
+	[[plugins.commands]]
+	name = 'Ag'
+	complete = 'file'
+
+[[plugins]]
+repository = 'tpope/vim-fugitive'
+external_commands = 'git'
+
+[[plugins]]
+repository = 'haya14busa/vim-migemo'
+external_commands = 'cmigemo'
+
+[[plugins]]
+repository = 'sudo.vim'
+external_commands = 'sudo'
+
+[[plugins]]
+repository = 'manicmaniac/betterga'
+external_commands = 'python'
+
+[[plugins]]
+repository = 'Shougo/vinarise.vim'
+external_commands = 'python'
+
+	[[plugins.commands]]
+	name = 'Vinarise'
+	complete = 'file'
+
+# colorscheme
+[[plugins]]
+repository = 'altercation/vim-colors-solarized'
+
+[[plugins]]
+repository = 'tomasr/molokai'
+
+# syntax
+[[plugins]]
+repository = 'JSON.vim'
+filetypes = 'json'
+
+[[plugins]]
+repository = 'tpope/vim-markdown'
+filetypes = 'markdown'
+
+[[plugins]]
+repository = 'cespare/vim-toml'
+filetypes = 'toml'
+
+[[plugins]]
+repository = 'rosstimson/scala-vim-support'
+filetypes = 'scala'
+
+[[plugins]]
+repository = 'kchmck/vim-coffee-script'
+filetypes = 'coffee'
+
+[[plugins]]
+repository = 'plist.vim'
+filetypes = 'plist'
+
+[[plugins]]
+repository = 'digitaltoad/vim-jade'
+filetypes = 'jade'
+
+# ftplugin
+[[plugins]]
+repository = 'osyo-manga/vim-watchdogs'
+depends = ['thinca/vim-quickrun', 'Shougo/vimproc.vim', 'osyo-manga/shabadou.vim', 'cohama/vim-hier', 'dannyob/quickfixstatus']
+filetypes = ['c', 'cpp', 'ruby', 'java', 'javascript', 'python', 'perl', 'php', 'lua', 'go', 'scala', 'sh', 'zsh', 'typescript', 'coffee', 'vim', 'haml']
+
+[[plugins]]
+repository = 'davidhalter/jedi-vim'
+filetypes = 'python'
+external_commands = 'python'
+
+[[plugins]]
+repository = 'marijnh/tern_for_vim'
+filetypes = 'javascript'
+external_commands = 'node'
+build_commands = 'npm'
+
+	[[plugins.build]]
+	others = 'npm install'
+

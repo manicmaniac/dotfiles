@@ -1,35 +1,22 @@
 # Unix
-alias tlf="tail -f"
+if ls --color=auto >/dev/null 2>&1; then
+    alias ls='ls -h --color=auto'
+else
+    alias ls='ls -h -G'
+fi
 alias ln='ln -v'
-alias mkdir='mkdir -p'
-alias ...='../..'
 alias l='ls'
-alias ll='ls -al'
+alias sl='ls'
+alias la='ls -a'
+alias ll='ls -l'
 alias lh='ls -Alh'
-alias -g G='| grep'
-alias -g M='| less'
-alias -g L='| wc -l'
-alias -g ONE="| awk '{ print \$1}'"
-alias e='$EDITOR'
-alias v='$VISUAL'
-
-# git
-alias gci="git pull --rebase && rake && git push"
-
-# Bundler
-alias b="bundle"
-
-# Tests and Specs
-alias t="ruby -I test"
-
-# Rails
-alias migrate="rake db:migrate db:rollback && rake db:migrate"
-alias m="migrate"
-alias rk="rake"
-alias s="rspec"
+alias tmux='tmux -2'
+alias vim='vim -O'
+alias vi='vim'
 
 # Pretty print the path
 alias path='echo $PATH | tr -s ":" "\n"'
 
 # Include custom aliases
 [[ -f ~/.aliases.local ]] && source ~/.aliases.local
+
