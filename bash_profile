@@ -9,5 +9,5 @@ export PATH="$HOME/.bin:/usr/local/sbin:$PATH"
 export PATH=".git/safe/../../bin:$PATH"
 
 # Local config
-[[ -f ~/.zshenv.local ]] && source ~/.zshenv.local
+[[ -f ~/.bash_profile.local ]] && source ~/.bash_profile.local
 

@@ -1,14 +1,15 @@
-" No audible bell
-set vb
+set t_vb=
 
-" No toolbar
-set guioptions-=T
+colorscheme solarized
+set background=light
 
-" Use console dialogs
-set guioptions+=c
+nnoremap <S-Space> <C-B>
 
-" Local config
+set guioptions=eiM
+
+set guifont=Ricty,Monospace
+
 if filereadable($HOME . "/.gvimrc.local")
-  source ~/.gvimrc.local
+    source ~/.gvimrc.local
 endif
 
