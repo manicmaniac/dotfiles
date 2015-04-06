@@ -6,7 +6,10 @@ runtime! init/plugins/*.vim
 
 " setting up colorscheme
 if !has('gui_running')
-	colorscheme molokai
+	try
+		colorscheme molokai
+	catch
+	endtry
 endif
 
 " finalize
