@@ -16,7 +16,7 @@
 \e\e abort
 
 #env
-LESS = -GNQirP ?f%F:<STDIN>.?l\\:%lb\\:%c.?P (%Pb\\%).?m  (file %i of %m).
+LESS = -GQirP ?f%F:<STDIN>.?l\\:%lb\\:%c.?P (%Pb\\%).?m  (file %i of %m).
 LESSEDIT = %E ?lm+%lm. %f
 LESSCHARSET = utf-8
 
