@@ -1,6 +1,3 @@
-# banner
-bash --version
-
 # undef Ctrl-S (lock tty)
 stty stop undef
 

@@ -1,6 +1,3 @@
-# banner
-zsh --version
-
 # undef Ctrl-S (lock tty)
 stty stop undef
 
