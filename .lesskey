@@ -1,0 +1,22 @@
+#command
+
+
+#line-edit
+^A   home
+^B   left
+^C   abort
+^D   delete
+^E   end
+^F   right
+^G   abort
+^K   word-delete
+^N   down
+^P   up
+^W   word-backspace
+\e\e abort
+
+#env
+LESS = -GNQirP ?f%F:<STDIN>.?l\\:%lb\\:%c.?P (%Pb\\%).?m  (file %i of %m).
+LESSEDIT = %E ?lm+%lm. %f
+LESSCHARSET = utf-8
+
