@@ -47,7 +47,6 @@ set bell-style none
 [[ -f ~/.aliases ]] && source ~/.aliases
 
 # anyenv
-export PATH="$HOME/.anyenv/bin:$PATH"
 eval "$(anyenv init -)"
 
 # extra files in ~/.bash/configs/pre , ~/.bash/configs , and ~/.bash/configs/post
