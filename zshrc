@@ -78,7 +78,6 @@ setopt equals  # =command as `which`
 [[ -f ~/.aliases ]] && source ~/.aliases
 
 # anyenv
-export PATH="$HOME/.anyenv/bin:$PATH"
 eval "$(anyenv init - zsh)"
 
 # extra files in ~/.zsh/configs/pre , ~/.zsh/configs , and ~/.zsh/configs/post

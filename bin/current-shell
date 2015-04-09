@@ -1,0 +1,6 @@
+#/bin/sh
+
+# print current shell
+
+ps o cmd= p $(ps o ppid= p $$)
+
