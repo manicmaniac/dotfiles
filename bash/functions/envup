@@ -1,6 +1,6 @@
 # Load .env file into shell session for environment variables
 
-function envup() {
+envup() {
   if [ -f .env ]; then
     export `cat .env`
   else
