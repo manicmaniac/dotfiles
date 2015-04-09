@@ -10,7 +10,8 @@ git_prompt_info() {
 }
 
 # prompt
-export PS1='${SSH_CONNECTION+"\e[1m\e[31m\u@\H:\e[39m\e[0m"}\e[1m\e[32m$PWD\e[39m\e[0m$(git_prompt_info) \$ '
+esc="$(printf '\033')"
+export PS1='${SSH_CONNECTION+"'"$esc"'[1m\e[31m\u@\H:'"$esc"'[39m'"$esc"'[0m"}'"$esc"'[1m'"$esc"'[32m$PWD'"$esc"'[39m'"$esc"'[0m$(git_prompt_info) \$ '
 
 # load custom executable functions
 for function in ~/.ksh/functions/*; do
@@ -26,11 +27,6 @@ export GREP_COLORS='ms=01;31:mc=01;31:sl=:cx=:fn=35:ln=32:bn=32:se=36'
 # history settings
 export HISTFILE=~/.ksh_history
 export HISTSIZE=65536
-export HISTFILESIZE=16777216
-export HISTTIMEFORMAT='%y/%m/%d %H:%M:%S '
-export HISTCONTROL=ignoredups
-share_history() { history -a; history -c; history -r; }
-PROMPT_COMMAND='share_history'
 export EXTENDED_HISTORY=ON
 
 # glob
