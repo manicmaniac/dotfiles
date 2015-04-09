@@ -7,6 +7,6 @@ RUN wget 'https://thoughtbot.github.io/rcm/debs/rcm_1.2.3-1_all.deb' && dpkg -i 
 ADD . dotfiles
 RUN mkdir .dotfiles.original && mv .bashrc .profile .dotfiles.original
 RUN env RCRC=dotfiles/rcrc rcup || true
-RUN dotfiles/vim/bundle/neobundle.vim/bin/neoinstall
+#RUN dotfiles/vim/bundle/neobundle.vim/bin/neoinstall
 RUN /usr/bin/chsh -s /usr/bin/zsh
 
