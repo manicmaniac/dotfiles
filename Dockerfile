@@ -9,5 +9,5 @@ RUN mkdir .dotfiles.original && mv .bashrc .profile .dotfiles.original
 RUN env RCRC=dotfiles/rcrc rcup || true
 #RUN dotfiles/vim/bundle/neobundle.vim/bin/neoinstall
 RUN /usr/bin/chsh -s /usr/bin/zsh
-ENTRYPOINT /usr/bin/zsh
+ENTRYPOINT ["/usr/bin/zsh"]
 
