@@ -1,0 +1,11 @@
+#!/bin/sh
+
+# cmigemo wrapper for shell
+
+res="$(cmigemo -d "$(migemo-find-dict)" "$@")"
+if [ "$(uname -s)" = 'Darwin' ]; then
+    echo "$res" | iconv -f 'utf-8' -t 'utf-8-mac'
+else
+    echo "$res"
+fi
+

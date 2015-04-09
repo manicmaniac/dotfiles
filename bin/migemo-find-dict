@@ -1,0 +1,93 @@
+#!/bin/sh
+
+set -e
+set -u
+
+banner='Find system migemo-dict
+
+Usage:
+    migemo-find-dict [-h] [-d <dir>] [-e <encoding>] [-n <name>]
+
+Options:
+    -h             show this screen and exit
+    -d <dir>       append <dir> to search path
+    -e <encoding>  set encoding name to <encoding> (default: utf-8)
+    -n <name>      set dictionary file name to <name> (default: migemo-dict)
+
+Requirements:
+    cmigemo(1)'
+
+is_valid_encoding() {
+    if type iconv >/dev/null 2>&1; then
+        iconv -l | tr -d // | grep -q -x "$(echo "$1" | tr '[a-z]' '[A-Z]')"
+    fi
+}
+
+normalize_encoding_name() {
+    if ! is_valid_encoding "$1"; then
+        echo "unknown encoding: $1" >&2
+        exit 1
+    fi
+    echo "$1" | tr '[A-Z]' '[a-z]'
+}
+
+paths=
+encoding='utf-8'
+name='migemo-dict'
+
+for OPT in "$@"
+do
+    case "$OPT" in
+        -h)
+            echo "$banner"
+            exit 1
+            ;;
+        -d)
+            pathes="$2\n$paths"
+            shift 2
+            ;;
+        -e)
+            encoding="$(normalize_encoding_name "$2")"
+            shift 2
+            ;;
+        -n)
+            name="$2"
+            shift 2
+            ;;
+        -*)
+            echo "unknown option: $1" >&2
+            exit 1
+            ;;
+    esac
+done
+
+if ! type 'cmigemo' >/dev/null 2>&1; then
+    echo 'you should install cmigemo first' >&2
+    exit 1
+fi
+
+paths="$paths
+/usr/local/share/migemo/$name
+/usr/local/share/migemo/$encoding/$name
+/usr/local/share/migemo/migemo/$encoding/$name
+/usr/local/share/cmigemo/$name
+/usr/local/share/cmigemo/$encoding/$name
+/usr/local/share/cmigemo/migemo/$encoding/$name
+/usr/local/share/$name
+/usr/local/share/$encoding/$name
+/usr/share/cmigemo/$name
+/usr/share/cmigemo/$encoding/$name
+/usr/share/cmigemo/migemo/$encoding/$name
+/usr/share/$name
+/usr/share/$encoding/$name
+/usr/share/migemo/$encoding/$name"
+
+# somehow cat is needed ...
+res="$(find $paths -name "$name" 2>/dev/null | cat)"
+
+if [ -z "$res" ]; then
+    exit 1
+else
+    echo "$res"
+fi
+
