@@ -2,5 +2,5 @@
 
 # print current shell
 
-ps o cmd= p $(ps o ppid= p $$)
+ps -o command= -p $(ps -o ppid= -p $$)
 
