@@ -112,6 +112,10 @@ repository = 'JSON.vim'
 filetypes = 'json'
 
 [[plugins]]
+repository = 'ekalinin/Dockerfile.vim'
+filetypes = 'Dockerfile'
+
+[[plugins]]
 repository = 'tpope/vim-markdown'
 filetypes = 'markdown'
 
