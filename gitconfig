@@ -32,3 +32,5 @@
   prune = true
 [include]
   path = ~/.gitconfig.local
+[url "git@github.com:"]
+	pushinsteadof = https://github.com/
