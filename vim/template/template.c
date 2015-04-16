@@ -1,10 +1,8 @@
-:call cursor(5, 4)
+:call cursor(3, 3)
 #include <stdio.h>
 
-int main(int argc, char const* argv[])
-{
-	
-	
-	return 0;
+int main(int argc, char const* argv[]) {
+    
+    return 0;
 }
 
