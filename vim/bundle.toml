@@ -124,6 +124,10 @@ repository = 'cespare/vim-toml'
 filetypes = 'toml'
 
 [[plugins]]
+repository = 'JuliaLang/julia-vim'
+filetypes = 'julia'
+
+[[plugins]]
 repository = 'rosstimson/scala-vim-support'
 filetypes = 'scala'
 
