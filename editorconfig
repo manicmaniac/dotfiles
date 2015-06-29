@@ -13,6 +13,6 @@ trim_trailing_whitespace = false
 [{Makefile,*.mk,*.make}]
 indent_style = tab
 
-[*.{js,json,htm,html,xhtml,xml,xsl,scm,el}]
+[*.{js,json,htm,html,xhtml,xml,xsl,scm,el,rb}]
 indent_size = 2
 
