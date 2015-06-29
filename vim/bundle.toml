@@ -21,7 +21,7 @@ insert = 1
 filetypes = 'snippet'
 
 [[plugins]]
-repository = 'editorconfig/editorconfig'
+repository = 'editorconfig/editorconfig-vim'
 
 [[plugins]]
 repository = 'tpope/vim-surround'
