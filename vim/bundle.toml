@@ -55,9 +55,6 @@ repository = 'bkad/CamelCaseMotion'
 mappings = '<Plug>'
 
 [[plugins]]
-repository = 'ciaranm/detectindent'
-
-[[plugins]]
 repository = 'thinca/vim-template'
 
 [[plugins]]
