@@ -26,3 +26,5 @@ autocmd BufRead,BufNewFile *.podspec,Podfile setfiletype ruby
 " setfiletype command.
 autocmd BufRead,BufNewFile *.json set filetype=json
 
+" cython
+autocmd BufRead,BufNewFile *.pyd set filetype=pyrex

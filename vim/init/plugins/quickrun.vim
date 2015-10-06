@@ -17,11 +17,15 @@ let g:quickrun_config.applescript = {
 			\ 'command': 'osascript',
 			\ }
 
-let g:quickrun_config.cython = {
-			\ 'command': 'gcc',
-			\ 'exec': ['cython %s:p:r', '%c %o %s -o %s:p:r', '%s:p:r %a'],
+let g:quickrun_config.tcl = {
+            \ 'command': 'tclsh',
+            \ }
+
+let g:quickrun_config.pyrex = {
+			\ 'command': 'python',
+			\ 'exec': ['%c -m Cython.Build.BuildExecutable %s'],
 			\ 'tempfile': '%{tempname()}.pyx',
-			\ 'hook/sweep/files': '%S:p:r',
+			\ 'hook/sweep/files': ['%S:p:r', '%S:p:r.o', '%S:p:r.c'],
 			\ }
 
 let g:quickrun_config.yaml = {
