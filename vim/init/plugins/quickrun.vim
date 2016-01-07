@@ -2,6 +2,22 @@ if !exists('g:quickrun_config')
 	let g:quickrun_config = {}
 endif
 
+let g:quickrun_config.c = g:quickrun#default_config.c
+
+let g:quickrun_config['c/gcc'] = {
+            \ 'command': 'gcc',
+            \ 'exec': ['%c '.$CFLAGS.' %o %s -o %s:p:r '.$LDFLAGS, '%s:p:r %a'],
+            \ 'tempfile': '%{tempname()}.c',
+            \ 'hook/sweep/files': '%S:p:r',
+            \ }
+
+let g:quickrun_config['c/clang'] = {
+            \ 'command': 'gcc',
+            \ 'exec': ['%c '.$CFLAGS.' %o %s -o %s:p:r '.$LDFLAGS, '%s:p:r %a'],
+            \ 'tempfile': '%{tempname()}.c',
+            \ 'hook/sweep/files': '%S:p:r',
+            \ }
+
 let g:quickrun_config.make = {
 			\ 'exec': ['%c -n -f %s'],
 			\ }
