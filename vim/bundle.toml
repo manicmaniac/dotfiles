@@ -133,6 +133,10 @@ repository = 'kchmck/vim-coffee-script'
 filetypes = 'coffee'
 
 [[plugins]]
+repository = 'bats.vim'
+filetypes = 'bats'
+
+[[plugins]]
 repository = 'plist.vim'
 filetypes = 'plist'
 
