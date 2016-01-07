@@ -135,7 +135,7 @@ set title
 " set iconstring=
 
 " 9 using the mouse
-" set mouse=
+set mouse+=a
 " set nomousefocus
 " set mousehide
 " set mousemodel=extend
