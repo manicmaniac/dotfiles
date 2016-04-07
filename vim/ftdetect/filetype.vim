@@ -28,3 +28,6 @@ autocmd BufRead,BufNewFile *.json set filetype=json
 
 " cython
 autocmd BufRead,BufNewFile *.pyd set filetype=pyrex
+
+" muttrc
+autocmd BufRead,BufNewFile *.mutt set filetype=muttrc
