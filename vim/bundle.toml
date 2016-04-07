@@ -151,6 +151,10 @@ filetypes = 'plist'
 repository = 'digitaltoad/vim-jade'
 filetypes = 'jade'
 
+[[plugins]]
+repository = 'slim-template/vim-slim'
+filetypes = 'slim'
+
 # ftplugin
 [[plugins]]
 repository = 'osyo-manga/vim-watchdogs'
