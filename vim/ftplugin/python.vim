@@ -1,3 +1,3 @@
 iabbrev <buffer> #! #!/usr/bin/env python
-execute 'iabbrev <buffer> #* # -*- coding:'.(&fileencoding != '' ? &fileencoding : 'utf-8').' -*-'
+iabbrev <buffer> slef self
 
