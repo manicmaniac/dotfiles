@@ -21,6 +21,9 @@ insert = 1
 filetypes = 'snippet'
 
 [[plugins]]
+repository = 'Shougo/unite.vim'
+
+[[plugins]]
 repository = 'editorconfig/editorconfig-vim'
 
 [[plugins]]
