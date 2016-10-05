@@ -38,6 +38,17 @@ let g:quickrun_config.applescript = {
 			\ 'command': 'osascript',
 			\ }
 
+let g:quickrun_config.scheme = {
+            \ 'type': executable('guile')    ? 'scheme/guile':
+            \         executable('gosh')     ? 'scheme/gauche':
+            \         executable('mzscheme') ? 'scheme/mzscheme': '',
+            \ }
+
+let g:quickrun_config['scheme/guile'] = {
+            \ 'command': 'guile',
+            \ 'exec': '%c -s %s'
+            \ }
+
 let g:quickrun_config.tcl = {
             \ 'command': 'tclsh',
             \ }
