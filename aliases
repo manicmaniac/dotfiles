@@ -13,6 +13,8 @@ alias lh='ls -Alh'
 alias tmux='tmux -2'
 alias vim='vim -O'
 alias vi='vim'
+alias gopen='gnome-open'
+alias xclip='xclip -selection clipboard'
 
 # Pretty print the path
 alias path='echo $PATH | tr -s ":" "\n"'
