@@ -132,6 +132,10 @@ repository = 'rosstimson/scala-vim-support'
 filetypes = 'scala'
 
 [[plugins]]
+repository = 'othree/yajs.vim'
+filetypes = 'javascript'
+
+[[plugins]]
 repository = 'keith/swift.vim'
 filetypes = 'swift'
 
