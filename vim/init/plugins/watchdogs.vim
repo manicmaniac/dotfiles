@@ -8,7 +8,7 @@ let g:watchdogs_check_BufWritePost_enables = {
 
 let g:watchdogs_check_CursorHold_enables = {
             \ 'ruby'       : 1,
-            \ 'javascript' : 1,
+            \ 'javascript' : 0,
             \ 'python'     : 1,
             \ 'perl'       : 1,
             \ 'php'        : 1,
