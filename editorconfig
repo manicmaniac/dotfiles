@@ -1,20 +1,37 @@
+# Default
 [*]
 charset = UTF-8
 end_of_line = LF
 insert_final_newline = true
 indent_style = space
-indent_size = 4
+indent_size = 2
 tab_width = 4
 trim_trailing_whitespace = true
 
+# Markdown
 [*.{md,mkd,markdown}]
 trim_trailing_whitespace = false
 
+# Makefile
 [{Makefile,*.mk,*.make}]
 indent_style = tab
 
-[*.{js,json,htm,html,xhtml,xml,xsl,scm,el,rb,erb,coffee,jade,css,slim,ru}]
-indent_size = 2
+# Python
+[*.{py,pyx}]
+indent_size = 4
 
-[Gemfile,Podfile,Rakefile]
-indent_size = 2
+# reStructuredText
+[*.{rst}]
+indent_size = 3
+
+# C
+[*.{c,cc,cpp,h,hh,hpp,m,mm}]
+indent_size = 4
+
+# Swift
+[*.{swift}]
+indent_size = 4
+
+# Java
+[*.{java}]
+indent_size = 4
