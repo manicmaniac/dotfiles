@@ -58,3 +58,6 @@ Session.vim
 .netrwhist
 *~
 
+.python-version
+.ruby-version
+.node-version
