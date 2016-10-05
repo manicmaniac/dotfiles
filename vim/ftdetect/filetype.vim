@@ -31,3 +31,6 @@ autocmd BufRead,BufNewFile *.pyd set filetype=pyrex
 
 " muttrc
 autocmd BufRead,BufNewFile *.mutt set filetype=muttrc
+
+" jinja2
+autocmd BufRead,BufNewFile *.jinja2 set filetype=htmldjango
