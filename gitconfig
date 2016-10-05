@@ -18,7 +18,7 @@
   current-branch = !sh -c 'git rev-parse --abbrev-ref HEAD' -
   delete-branch = !sh -c 'git push origin :refs/heads/$1 && git branch -D $1' -
   discard = checkout --
-  graph = log --graph -10 --branches --remotes --tags  --format=format:'%Cgreen%h %Creset• %<(75,trunc)%s (%cN, %cr) %Cred%d' --date-order
+  graph = log --graph -10 --branches --remotes --tags  --format=format:'%Cgreen%h %Creset- %<(50,trunc)%s (%cN, %cr) %Cred%d' --date-order
   merge-branch = !git checkout master && git merge @{-1}
   nevermind = !git reset --hard HEAD && git clean -d -f
   pr = !hub pull-request
