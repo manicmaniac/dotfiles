@@ -18,6 +18,11 @@ let g:quickrun_config['c/clang'] = {
             \ 'hook/sweep/files': '%S:p:r',
             \ }
 
+let g:quickrun_config.coconut = {
+            \ 'command': 'coconut',
+            \ 'exec': ['%c -nqr %s'],
+            \ }
+
 let g:quickrun_config.make = {
 			\ 'exec': ['%c -n -f %s'],
 			\ }
