@@ -143,6 +143,10 @@ filetypes = 'swift'
 repository = 'kchmck/vim-coffee-script'
 filetypes = 'coffee'
 
+# [[plugins]]
+# repository = 'manicmaniac/coconut.vim'
+# filetypes = 'coconut'
+
 [[plugins]]
 repository = 'bats.vim'
 filetypes = 'bats'
