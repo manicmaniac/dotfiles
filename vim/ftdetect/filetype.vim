@@ -20,6 +20,9 @@ autocmd BufRead,BufNewFile *.m set filetype=objc
 " cocoapods
 autocmd BufRead,BufNewFile *.podspec,Podfile setfiletype ruby
 
+" fastlane
+autocmd BufRead,BufNewFile Appfile,Fastfile,Scanfile,Snapfile setfiletype ruby
+
 " json
 " by default, *.json file is defined as javascript.
 " to override default setting, use set filetype= instaed of
@@ -30,7 +33,7 @@ autocmd BufRead,BufNewFile *.json set filetype=json
 autocmd BufRead,BufNewFile *.pyd set filetype=pyrex
 
 " muttrc
-autocmd BufRead,BufNewFile *.mutt* set filetype=muttrc
+autocmd BufRead,BufNewFile *.mutt set filetype=muttrc
 
 " jinja2
 autocmd BufRead,BufNewFile *.jinja2 set filetype=htmldjango
@@ -40,3 +43,6 @@ autocmd BufRead,BufNewFile *.offlineimaprc set filetype=dosini
 
 " applescript
 autocmd BufRead,BufNewFile *.applescript set filetype=applescript
+
+" coconut
+autocmd BufRead,BufNewFile *.coco set filetype=coconut

@@ -170,7 +170,7 @@ nnoremap T<CR> ^
 nnoremap Y y$
 
 " open help with a single key stroke
-nnoremap <C-H> :vertical help 
+nnoremap <C-H> :vertical help
 
 " substitute a word onto which the cursor is
 nnoremap <S-S> "syiw:%s/<C-R>s//g<Left><Left>
@@ -221,3 +221,5 @@ nnoremap <Esc><Space> <C-B>
 nnoremap <C-S> <Esc>q:?
 cnoremap <C-S> <Esc>q:?
 
+" Unite file_rec/async
+nnoremap <c-p> :Unite -start-insert file_rec/async<cr>

@@ -10,6 +10,9 @@ repository = 'Shougo/vimproc.vim'
   unix = 'gmake'
 
 [[plugins]]
+repository = 'Shougo/unite.vim'
+
+[[plugins]]
 repository = 'Shougo/neocomplcache.vim'
 depends = 'Shougo/vimproc.vim'
 insert = 1
@@ -24,6 +27,9 @@ filetypes = 'snippet'
 repository = 'Shougo/unite.vim'
 
 [[plugins]]
+repository = 'renamer.vim'
+
+[[plugins]]
 repository = 'editorconfig/editorconfig-vim'
 
 [[plugins]]
@@ -32,6 +38,11 @@ repository = 'tpope/vim-surround'
 [[plugins]]
 repository = 'thinca/vim-quickrun'
 depends = 'Shougo/vimproc.vim'
+mappings = '<Plug>'
+
+[[plugins]]
+repository = 'manicmaniac/vim-quickrun-qo'
+depends = 'thinca/vim-quickrun'
 mappings = '<Plug>'
 
 [[plugins]]
@@ -124,20 +135,12 @@ repository = 'cespare/vim-toml'
 filetypes = 'toml'
 
 [[plugins]]
-repository = 'justmao945/vim-clang'
-filetypes = ['c', 'cpp', 'objc']
+repository = 'keith/swift.vim'
+filetypes = 'swift'
 
 [[plugins]]
 repository = 'JuliaLang/julia-vim'
 filetypes = 'julia'
-
-[[plugins]]
-repository = 'fatih/vim-go'
-filetypes = 'go'
-
-[[plugins]]
-repository = 'rust-lang/rust.vim'
-filetypes = 'rust'
 
 [[plugins]]
 repository = 'rosstimson/scala-vim-support'
@@ -168,6 +171,10 @@ repository = 'bats.vim'
 filetypes = 'bats'
 
 [[plugins]]
+repository = 'manicmaniac/coconut.vim'
+filtypes = 'coconut'
+
+[[plugins]]
 repository = 'plist.vim'
 filetypes = 'plist'
 
@@ -188,6 +195,19 @@ filetypes = 'slim'
 repository = 'osyo-manga/vim-watchdogs'
 depends = ['thinca/vim-quickrun', 'Shougo/vimproc.vim', 'osyo-manga/shabadou.vim', 'cohama/vim-hier', 'dannyob/quickfixstatus']
 filetypes = ['c', 'cpp', 'ruby', 'java', 'javascript', 'python', 'perl', 'php', 'lua', 'go', 'scala', 'sh', 'zsh', 'typescript', 'coffee', 'vim', 'haml']
+
+[[plugins]]
+repository = 'justmao945/vim-clang'
+filetypes = ['c', 'cpp', 'objc']
+external_commands = 'clang'
+
+# [[plugins]]
+# repository = 'keith/sourcekittendaemon.vim'
+# filetypes = ['swift']
+
+[[plugins]]
+repository = 'lambdalisue/vim-pyenv'
+depends = ['davidhalter/jedi-vim']
 
 [[plugins]]
 repository = 'davidhalter/jedi-vim'

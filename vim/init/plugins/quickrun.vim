@@ -32,9 +32,14 @@ let g:quickrun_config.make = {
 			\ 'exec': ['%c -n -f %s'],
 			\ }
 
+let g:quickrun_config.coconut = {
+            \ 'command': 'coconut',
+			\ 'exec': ['%c -qnr %s'],
+			\ }
+
 let g:quickrun_config.objc = {
 			\ 'command': 'clang',
-			\ 'exec': ['%c %s -o %s:p:r -framework Foundation', '%s:p:r %a'],
+			\ 'exec': ['%c %s -o %s:p:r -fobjc-arc -framework Foundation', '%s:p:r %a'],
 			\ 'tempfile': '%{tempname()}.m',
 			\ 'hook/sweep/files': '%S:p:r',
 			\ }
@@ -66,11 +71,26 @@ let g:quickrun_config.tcl = {
             \ }
 
 let g:quickrun_config.pyrex = {
-			\ 'command': 'python',
-			\ 'exec': ['%c -m Cython.Build.BuildExecutable %s'],
-			\ 'tempfile': '%{tempname()}.pyx',
-			\ 'hook/sweep/files': ['%S:p:r', '%S:p:r.o', '%S:p:r.c'],
-			\ }
+            \ 'command': 'python',
+            \ 'exec': ['%c -m Cython.Build.BuildExecutable %s'],
+            \ 'tempfile': '%{tempname()}.pyx}',
+            \ 'hook/sweep/files': ['%S:p:r', '%S:p:r.c', '%S:p:r.o'],
+            \ }
+
+let g:quickrun_config.scheme = {
+            \ 'type': executable('guile')    ? 'scheme/guile':
+            \         executable('gosh')     ? 'scheme/gauche':
+            \         executable('mzscheme') ? 'scheme/mzscheme': ''
+            \ }
+
+let g:quickrun_config['scheme/guile'] = {
+            \ 'command': 'guile',
+            \ 'exec': ['%c -s %s'],
+            \ }
+
+let g:quickrun_config.tcl = {
+            \ 'command': 'tclsh',
+            \ }
 
 let g:quickrun_config.yaml = {
 			\ 'command': 'ruby',
@@ -93,7 +113,9 @@ if &filetype != 'vim'
 endif
 
 function! quickrun#compile()
-	if &filetype == 'scala'
+	if &filetype == 'coconut'
+        QuickRun -exec 'coconut -dnq %s'
+	elseif &filetype == 'scala'
 		QuickRun -exec 'scalac %o %s' -exec 'scala %s:t:r %a'
 					\ -hook/output_encode/encoding '&termencoding'
 					\ -hook/sweep/files ['%S:p:r.class', '%S:p:r$.class']
@@ -105,6 +127,10 @@ function! quickrun#compile()
 		QuickRun -exec '%c -p %o %s'
 					\ -outputter/buffer/name '[quickrun compile]'
 					\ -outputter/buffer/filetype 'javascript'
+	elseif &filetype == 'rst'
+		QuickRun -exec 'pandoc -s %s'
+					\ -outputter/buffer/name '[quickrun compile]'
+					\ -outputter/buffer/filetype 'html'
 	elseif &filetype == 'markdown'
 		QuickRun -exec 'pandoc -s %s'
 					\ -outputter/buffer/name '[quickrun compile]'
