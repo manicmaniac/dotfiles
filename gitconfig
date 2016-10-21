@@ -29,7 +29,7 @@
   shallow-clone = clone --depth 1 --single-branch
   st = status
   stashes = stash list
-  tags = tag
+  tags = tag --list --sort=version:refname
   unmerged = diff --name-only --diff-filter=U
   unstage = reset -q HEAD --
   untrack = rm -r --cached
