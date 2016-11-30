@@ -2,6 +2,15 @@
 
 dotfiles_dir="${0%/*/*}"
 
+apply_patch() {
+  patch="$1"
+  if type git >/dev/null 2>&1; then
+    git --git-dir= apply --verbose --directory=$HOME -p0 < "$patch"
+  else
+    patch -d $HOME -p0 < "$patch"
+  fi
+}
+
 touch $HOME/.psqlrc.local
 
 # build .less from .lesskey
@@ -11,11 +20,12 @@ fi
 
 # patch to avoid incompatibility between tig < 2.0 and >= 2.0
 if expr "$(tig --version | cut -f3 -d\ )" : '1\.[0-9][0-9]*\.[0-9][0-9]*'; then
-    patch="$dotfiles_dir/patches/tigrc-1.x.diff"
-    if type git >/dev/null 2>&1; then
-        git --git-dir= apply --verbose --directory=$HOME -p0 < "$patch"
-    else
-        patch -d $HOME -p0 < "$patch"
-    fi
+    apply_patch "$dotfiles_dir/patches/tigrc-1.x.diff"
 fi
 
+# patch to avoid incompatibility between tmux < 2.0 and >= 2.0
+if expr "$(tmux -V | cut -f2 -d\ )" : '1\.[0-9]'; then
+    ln -s "$HOME/.tmux.conf-1.x" "$HOME/.tmux.conf"
+else
+    ln -s "$HOME/.tmux.conf-2.x" "$HOME/.tmux.conf"
+fi
