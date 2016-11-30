@@ -114,14 +114,14 @@ describe file '/root/.Gemfile.lock' do
   it { is_expected.not_to exist }
 end
 
-describe file '/root/.INSTALL.sh' do
-  it { is_expected.not_to exist }
-end
-
 describe file '/root/.LICENSE' do
   it { is_expected.not_to exist }
 end
 
 describe file '/root/.README.md' do
+  it { is_expected.not_to exist }
+end
+
+describe file '/root/.docs' do
   it { is_expected.not_to exist }
 end

@@ -29,7 +29,7 @@ Install
 
 1. Install [rcm](https://github.com/thoughtbot/rcm).
 
-2. Execute `curl -L goo.gl/4S9v9Z | sh`.
+2. Execute `curl https://manicmaniac.github.io/dotfiles/installer | sh`.
 
 The rest of this section is detailed information.
 

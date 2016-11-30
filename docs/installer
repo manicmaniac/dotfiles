@@ -1,10 +1,9 @@
 #!/bin/sh
 
 if type git rcup; then
-    git clone --branch master --single-branch --depth 1 --recursive https://github.com/manicmaniac/dotfiles
+    git clone --branch master --single-branch --depth 1 --recursive https://github.com/manicmaniac/dotfiles.git
     env RCRC=dotfiles/rcrc rcup
 else
     echo 'Dependencies unsatisfied. read "https://github.com/manicmaniac/dotfiles#install".' >&2
     exit 1
 fi
-
