@@ -1,0 +1,14 @@
+sudo: required
+language: ruby
+branches:
+  only:
+    - master
+services:
+  - docker
+env:
+  - TARGET_CONTAINER_ID=container-manicmaniac-dotfiles
+before_script:
+  - docker build -t manicmaniac-dotfiles .
+  - docker run -dit --name $TARGET_CONTAINER_ID manicmaniac-dotfiles
+script:
+  - bundle exec rspec
