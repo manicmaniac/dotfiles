@@ -14,8 +14,13 @@ Set zsh as your login shell:
 
     chsh -s $(which zsh)
 
-Also bash can use:
+Also bash can be used:
+
     chsh -s $(which bash)
+
+And ksh:
+
+    chsh -s $(which ksh)
 
 Install
 -------
