@@ -1,6 +1,8 @@
 dotfiles
 ========
 
+[![Build Status](https://travis-ci.org/manicmaniac/dotfiles.svg?branch=master)](https://travis-ci.org/manicmaniac/dotfiles)
+
 Introduction
 ------------
 
