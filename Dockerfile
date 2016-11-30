@@ -10,4 +10,3 @@ RUN env USER=root RCRC=dotfiles/rcrc rcup || true
 RUN dotfiles/vim/bundle/neobundle.vim/bin/neoinstall
 RUN /usr/bin/chsh -s /usr/bin/zsh
 ENTRYPOINT ["/usr/bin/zsh"]
-
