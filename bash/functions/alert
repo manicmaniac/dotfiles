@@ -1,0 +1,3 @@
+alert() {
+  osascript -e "display notification \"${2:-(no message)}\" with title \"${1:-(no title)}\""
+}

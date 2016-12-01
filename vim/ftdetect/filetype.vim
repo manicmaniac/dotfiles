@@ -46,3 +46,6 @@ autocmd BufRead,BufNewFile *.applescript set filetype=applescript
 
 " coconut
 autocmd BufRead,BufNewFile *.coco set filetype=coconut
+
+" jenkins
+autocmd BufRead,BufNewFile Jenkinsfile set filetype=groovy

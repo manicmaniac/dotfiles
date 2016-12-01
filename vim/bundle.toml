@@ -151,6 +151,14 @@ repository = 'rust-lang/rust.vim'
 filetypes = 'rust'
 
 [[plugins]]
+repository = 'groovy.vim'
+filetypes = 'groovy'
+
+[[plugins]]
+repository = 'groovyindent'
+filetypes = 'groovy'
+
+[[plugins]]
 repository = 'othree/yajs.vim'
 filetypes = 'javascript'
 

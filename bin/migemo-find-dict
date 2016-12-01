@@ -67,6 +67,8 @@ if ! type 'cmigemo' >/dev/null 2>&1; then
 fi
 
 paths="$paths
+$HOME/.migemo/$name
+$HOME/.migemo/$encoding/$name
 /usr/local/share/migemo/$name
 /usr/local/share/migemo/$encoding/$name
 /usr/local/share/migemo/migemo/$encoding/$name
