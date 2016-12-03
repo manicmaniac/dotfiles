@@ -12,6 +12,10 @@ describe file '/root/.gitignore' do
   it { is_expected.to be_readable }
 end
 
+describe file '/root/.gitmessage' do
+  it { is_expected.to be_readable }
+end
+
 describe package 'tmux' do
   it { is_expected.to be_installed }
 end
@@ -34,6 +38,10 @@ end
 
 describe file '/root/.vimrc' do
   it { is_expected.to be_readable }
+end
+
+describe file '/root/.vim' do
+  it { is_expected.to be_directory }
 end
 
 describe file '/root/.gvimrc' do
@@ -100,6 +108,22 @@ describe command 'USER=root RCRC=$HOME/dotfiles/rcrc rcup' do
   its(:stdout) { is_expected.to be_empty }
   its(:stderr) { is_expected.to be_empty }
   its(:exit_status) { is_expected.to eq 0 }
+end
+
+describe file '/root/.agignore' do
+  it { is_expected.to exist }
+end
+
+describe file '/root/.aliases' do
+  it { is_expected.to exist }
+end
+
+describe file '/root/.editorconfig' do
+  it { is_expected.to exist }
+end
+
+describe file '/root/.gemrc' do
+  it { is_expected.to exist }
 end
 
 describe file '/root/.Dockerfile' do
