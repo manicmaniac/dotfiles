@@ -30,7 +30,10 @@ autocmd BufRead,BufNewFile *.json set filetype=json
 autocmd BufRead,BufNewFile *.pyd set filetype=pyrex
 
 " muttrc
-autocmd BufRead,BufNewFile *.mutt set filetype=muttrc
+autocmd BufRead,BufNewFile *.mutt* set filetype=muttrc
 
 " jinja2
 autocmd BufRead,BufNewFile *.jinja2 set filetype=htmldjango
+
+" offlineimap
+autocmd BufRead,BufNewFile *.offlineimaprc set filetype=dosini
