@@ -21,7 +21,7 @@ indent_style = tab
 indent_size = 4
 
 # reStructuredText
-[*.{rst}]
+[*.rst]
 indent_size = 3
 
 # C
@@ -29,9 +29,18 @@ indent_size = 3
 indent_size = 4
 
 # Swift
-[*.{swift}]
+[*.swift]
 indent_size = 4
 
 # Java
-[*.{java}]
+[*.java]
+indent_size = 4
+
+# Go
+[*.go]
+indent_style = tab
+indent_size = 4
+
+# Rust
+[*.rs]
 indent_size = 4
