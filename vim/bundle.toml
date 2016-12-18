@@ -124,8 +124,20 @@ repository = 'cespare/vim-toml'
 filetypes = 'toml'
 
 [[plugins]]
+repository = 'justmao945/vim-clang'
+filetypes = ['c', 'cpp', 'objc']
+
+[[plugins]]
 repository = 'JuliaLang/julia-vim'
 filetypes = 'julia'
+
+[[plugins]]
+repository = 'fatih/vim-go'
+filetypes = 'go'
+
+[[plugins]]
+repository = 'rust-lang/rust.vim'
+filetypes = 'rust'
 
 [[plugins]]
 repository = 'rosstimson/scala-vim-support'

@@ -4,6 +4,11 @@ endif
 
 let g:quickrun_config.c = g:quickrun#default_config.c
 
+let g:quickrun_config['go'] = {
+      \ 'command': 'go',
+      \ 'exec': ['%c run %s']
+      \}
+
 let g:quickrun_config['c/gcc'] = {
             \ 'command': 'gcc',
             \ 'exec': ['%c '.$CFLAGS.' %o %s -o %s:p:r '.$LDFLAGS, '%s:p:r %a'],
@@ -31,6 +36,13 @@ let g:quickrun_config.objc = {
 			\ 'command': 'clang',
 			\ 'exec': ['%c %s -o %s:p:r -framework Foundation', '%s:p:r %a'],
 			\ 'tempfile': '%{tempname()}.m',
+			\ 'hook/sweep/files': '%S:p:r',
+			\ }
+
+let g:quickrun_config.rust = {
+			\ 'command': 'rustc',
+			\ 'exec': ['RUST_BACKTRACE=1 %c %s -o %s:p:r', '%s:p:r %a'],
+			\ 'tempfile': '%{tempname()}.rs',
 			\ 'hook/sweep/files': '%S:p:r',
 			\ }
 
