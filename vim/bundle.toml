@@ -135,6 +135,10 @@ repository = 'cespare/vim-toml'
 filetypes = 'toml'
 
 [[plugins]]
+repository = 'justmao945/vim-clang'
+filetypes = ['c', 'cpp', 'objc']
+
+[[plugins]]
 repository = 'keith/swift.vim'
 filetypes = 'swift'
 
