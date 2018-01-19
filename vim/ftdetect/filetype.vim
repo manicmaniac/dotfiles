@@ -37,3 +37,6 @@ autocmd BufRead,BufNewFile *.jinja2 set filetype=htmldjango
 
 " offlineimap
 autocmd BufRead,BufNewFile *.offlineimaprc set filetype=dosini
+
+" applescript
+autocmd BufRead,BufNewFile *.applescript set filetype=applescript

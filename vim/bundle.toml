@@ -168,6 +168,10 @@ repository = 'plist.vim'
 filetypes = 'plist'
 
 [[plugins]]
+repository = 'applescript.vim'
+filetypes = 'applescript'
+
+[[plugins]]
 repository = 'digitaltoad/vim-jade'
 filetypes = 'jade'
 
