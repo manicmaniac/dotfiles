@@ -203,3 +203,6 @@ build_commands = 'npm'
   [plugins.build]
   others = 'npm install'
 
+[[plugins]]
+repository = 'flowtype/vim-flow'
+filetypes = 'javascript'
