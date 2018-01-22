@@ -1,2 +1,3 @@
-[ -f ~/.profile.local ] && . ~/.profile.local
+export PATH="$HOME/.cargo/bin:$PATH"
 
+[ -f ~/.profile.local ] && . ~/.profile.local

@@ -11,6 +11,8 @@ export PATH=".git/safe/../../bin:$PATH"
 # anyenv
 export PATH="$HOME/.anyenv/bin:$PATH"
 
+# rustup
+export PATH="$HOME/.cargo/bin:$PATH"
+
 # Local config
 [[ -f ~/.bash_profile.local ]] && source ~/.bash_profile.local
-

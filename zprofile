@@ -11,5 +11,8 @@ export PATH=".git/safe/../../bin:$PATH"
 # anyenv
 export PATH="$HOME/.anyenv/bin:$PATH"
 
+# rustup
+export PATH="$HOME/.cargo/env:$PATH"
+
 # Local config
 [[ -f ~/.zprofile.local ]] && source ~/.zprofile.local
