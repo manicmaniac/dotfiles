@@ -159,6 +159,10 @@ repository = 'rosstimson/scala-vim-support'
 filetypes = 'scala'
 
 [[plugins]]
+repository = 'applescript.vim'
+filetypes = 'applescript'
+
+[[plugins]]
 repository = 'racer-rust/vim-racer'
 filetypes = 'rust'
 
