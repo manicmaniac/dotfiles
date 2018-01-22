@@ -250,3 +250,4 @@ build_commands = 'npm'
 [[plugins]]
 repository = 'flowtype/vim-flow'
 filetypes = 'javascript'
+external_commands = 'flow'
