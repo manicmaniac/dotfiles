@@ -44,13 +44,6 @@ let g:quickrun_config.objc = {
 			\ 'hook/sweep/files': '%S:p:r',
 			\ }
 
-let g:quickrun_config.rust = {
-			\ 'command': 'rustc',
-			\ 'exec': ['RUST_BACKTRACE=1 %c %s -o %s:p:r', '%s:p:r %a'],
-			\ 'tempfile': '%{tempname()}.rs',
-			\ 'hook/sweep/files': '%S:p:r',
-			\ }
-
 let g:quickrun_config.applescript = {
 			\ 'command': 'osascript',
 			\ }
