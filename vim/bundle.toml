@@ -143,6 +143,10 @@ repository = 'keith/swift.vim'
 filetypes = 'swift'
 
 [[plugins]]
+repository = 'rust-lang/rust.vim'
+filetypes = 'rust'
+
+[[plugins]]
 repository = 'JuliaLang/julia-vim'
 filetypes = 'julia'
 
@@ -151,7 +155,7 @@ repository = 'rosstimson/scala-vim-support'
 filetypes = 'scala'
 
 [[plugins]]
-repository = 'rust-lang/rust.vim'
+repository = 'racer-rust/vim-racer'
 filetypes = 'rust'
 
 [[plugins]]
