@@ -48,6 +48,11 @@ let g:quickrun_config.applescript = {
 			\ 'command': 'osascript',
 			\ }
 
+let g:quickrun_config.postscr = {
+      \ 'command': 'gs',
+      \ 'exec': ['%c -q -dBATCH %s'],
+      \ }
+
 let g:quickrun_config.scheme = {
             \ 'type': executable('guile')    ? 'scheme/guile':
             \         executable('gosh')     ? 'scheme/gauche':
