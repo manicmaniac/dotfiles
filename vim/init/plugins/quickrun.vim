@@ -39,7 +39,7 @@ let g:quickrun_config.coconut = {
 
 let g:quickrun_config.objc = {
 			\ 'command': 'clang',
-			\ 'exec': ['%c %s -o %s:p:r -fobjc-arc -framework Foundation', '%s:p:r %a'],
+			\ 'exec': ['%c '.$CFLAGS.' %s -o %s:p:r '.$LDFLAGS.' -fobjc-arc -framework AppKit -framework Security', '%s:p:r %a'],
 			\ 'tempfile': '%{tempname()}.m',
 			\ 'hook/sweep/files': '%S:p:r',
 			\ }
