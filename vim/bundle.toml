@@ -151,6 +151,10 @@ repository = 'JuliaLang/julia-vim'
 filetypes = 'julia'
 
 [[plugins]]
+repository = 'udalov/kotlin-vim'
+filetypes = 'kotlin'
+
+[[plugins]]
 repository = 'rosstimson/scala-vim-support'
 filetypes = 'scala'
 
