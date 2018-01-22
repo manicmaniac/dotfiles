@@ -106,6 +106,11 @@ let g:quickrun_config.xslt = {
 			\ 'exec': ['%c %s %a'],
 			\ }
 
+let g:quickrun_config.kotlin = {
+			\ 'command': 'kotlinc',
+			\ 'exec': ['%c %s -include-runtime -d %s:p:r.jar', 'java -jar %s:p:r.jar'],
+			\ }
+
 let g:quickrun_config._ = {'runner': 'vimproc', 'runner/vimproc/updatetime': 10}
 
 if &filetype != 'vim'

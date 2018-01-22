@@ -32,6 +32,10 @@ indent_size = 4
 [*.swift]
 indent_size = 4
 
+# Kotlin
+[*.kt]
+indent_size = 4
+
 # Java
 [*.java]
 indent_size = 4
