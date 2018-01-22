@@ -27,11 +27,14 @@
   prestage = diff -w --word-diff=color
   remotes = remote -v
   rename-branch = !sh -c 'old=$(git current-branch) && git branch -m $old $1 && git push origin --set-upstream $1 && git push origin --delete $old' -
+  root = rev-parse --show-toplevel
+  safe = !mkdir "`git rev-parse --show-toplevel`/.git/safe"
   shallow-clone = clone --depth 1 --single-branch
   st = status
   stashes = stash list
   tags = tag --list --sort=version:refname
   unmerged = diff --name-only --diff-filter=U
+  unsafe = !rmdir "`git rev-parse --show-toplevel`/.git/safe"
   unstage = reset -q HEAD --
   untrack = rm -r --cached
   up = !git fetch origin && git rebase origin/master
