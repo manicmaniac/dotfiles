@@ -1,0 +1,3 @@
+#!/bin/sh
+
+tmux -V | grep -o '[0-9]' | head -n 1

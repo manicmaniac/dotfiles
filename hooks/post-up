@@ -22,10 +22,3 @@ fi
 if expr "$(tig --version | cut -f3 -d\ )" : '1\.[0-9][0-9]*\.[0-9][0-9]*' >/dev/null 2>&1; then
     apply_patch "$dotfiles_dir/patches/tigrc-1.x.diff"
 fi
-
-# patch to avoid incompatibility between tmux < 2.0 and >= 2.0
-if expr "$(tmux -V | cut -f2 -d\ )" : '1\.[0-9]' >/dev/null 2>&1; then
-    ln -f -s "$HOME/.tmux.conf-1.x" "$HOME/.tmux.conf"
-else
-    ln -f -s "$HOME/.tmux.conf-2.x" "$HOME/.tmux.conf"
-fi
