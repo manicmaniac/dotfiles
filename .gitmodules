@@ -7,3 +7,12 @@
 [submodule "vim/pack/dist/start/molokai"]
 	path = vim/pack/dist/start/molokai
 	url = https://github.com/tomasr/molokai.git
+[submodule "vim/pack/dist/opt/vim-slim"]
+	path = vim/pack/dist/opt/vim-slim
+	url = https://github.com/slim-template/vim-slim.git
+[submodule "vim/pack/dist/start/vim-fugitive"]
+	path = vim/pack/dist/start/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive.git
+[submodule "vim/pack/dist/opt/swift.vim"]
+	path = vim/pack/dist/opt/swift.vim
+	url = https://github.com/keith/swift.vim.git

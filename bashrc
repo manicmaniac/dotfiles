@@ -1,6 +1,6 @@
 g() {
     if [[ $# -gt 0 ]]; then
-        git $@
+        git "$@"
     else
         git status
     fi
@@ -12,10 +12,12 @@ share_history() {
     history -r
 }
 
+export ANDROID_HOME="$HOME/Library/Android/sdk"
 PATH=
 [[ -x /usr/libexec/path_helper ]] && eval $(/usr/libexec/path_helper -s)
-export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
+export PATH="$HOME/Library/Python/3.8/bin:$HOME.cargo/bin:/opt/local/bin:/opt/local/sbin:$PATH:$ANDROID_HOME/platform-tools"
 export CLICOLOR=1
+export EDITOR=vim
 export LSCOLORS=Exfxcxdxbxegedabagacad
 export LS_COLORS='di=01;34:ln=01;35:so=01;32:ex=01;31:bd=46;34:cd=43;34:su=41;30:tw=42;30:ow=43;30'
 export GREP_COLORS='ms=01;31:mc=01;31:sl=:cx=:fn=35:ln=32:bn=32:se=36'

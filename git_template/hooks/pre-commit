@@ -1,16 +1,5 @@
 #!/bin/sh
 
-# error if user.name or user.email is not specified
-if ! git config --local user.name >/dev/null || ! git config --local user.email >/dev/null; then
-  tput colors >/dev/null && printf "\033[0;31m" # set color red
-  echo "Cancelled the commit because user.name or user.email is not specified."
-  echo "Please be sure running the following commands:\n"
-  echo '    git config --local user.name <USER_NAME>'
-  echo '    git config --local user.email <USER_EMAIL>'
-  tput colors >/dev/null && printf "\033[0m" # reset color
-  exit 70
-fi
-
 local_hook="$HOME"/.git_template.local/hooks/pre-commit
 
 if [ -f "$local_hook" ]; then

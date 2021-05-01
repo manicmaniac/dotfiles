@@ -2,6 +2,6 @@ alias l=ls
 alias sl=ls
 alias la='ls -a'
 alias ll='ls -l'
-alias vim='vim -O'
+# alias vim='vim -O'
 alias gopen=gnome-open
 [ -f "$HOME/.aliases.local" ] && source "$HOME/.aliases.local"
