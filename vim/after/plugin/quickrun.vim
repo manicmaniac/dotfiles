@@ -80,7 +80,7 @@ let g:quickrun_config.pyrex = {
 
 let g:quickrun_config.yaml = {
 	\ 'command': 'ruby',
-	\ 'exec': ['%c -r yaml -r json -e "puts JSON.pretty_generate(YAML.load(ARGF.read))" %s'],
+	\ 'exec': ['%c -r yaml -r json -e "print JSON.pretty_generate(YAML.load(ARGF.read))" %s'],
 	\ 'outputter/buffer/filetype': 'json',
 	\ }
 
