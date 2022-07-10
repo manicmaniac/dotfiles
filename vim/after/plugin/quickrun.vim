@@ -65,6 +65,12 @@ let g:quickrun_config.tcl = {
             \ 'command': 'tclsh',
             \ }
 
+let g:quickrun_config.bplist = {
+            \ 'command': 'plutil',
+            \ 'exec': ['%c -convert xml1 -o - -- %s | pl'],
+            \ 'outputter/buffer/filetype': 'plist',
+            \ }
+
 let g:quickrun_config.pyrex = {
 			\ 'command': 'python',
 			\ 'exec': ['%c -m Cython.Build.BuildExecutable %s'],
@@ -74,7 +80,8 @@ let g:quickrun_config.pyrex = {
 
 let g:quickrun_config.yaml = {
 			\ 'command': 'ruby',
-			\ 'exec': ['%c -r yaml -r pp -e "pp YAML.load(ARGF.read())" %s'],
+			\ 'exec': ['%c -r yaml -r json -e "puts JSON.pretty_generate(YAML.load(ARGF.read))" %s'],
+            \ 'outputter/buffer/filetype': 'json',
 			\ }
 
 let g:quickrun_config.jade = {
