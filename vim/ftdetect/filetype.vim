@@ -18,7 +18,7 @@ autocmd BufRead,BufNewFile *.strings,*.pbxproj setfiletype plist
 autocmd BufRead,BufNewFile *.m set filetype=objc
 
 " cocoapods
-autocmd BufRead,BufNewFile *.podspec,Podfile setfiletype ruby
+autocmd BufRead,BufNewFile Dangerfile,Fastfile,Gymfile,Podfile,Scanfile,*.podspec setfiletype ruby
 
 " json
 " by default, *.json file is defined as javascript.
