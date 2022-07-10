@@ -1,3 +1,0 @@
-jedi>=0.8.1-final0
-pyflakes>=0.8.1
-vint>=0.1.5
