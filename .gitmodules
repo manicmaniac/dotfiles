@@ -7,3 +7,15 @@
 [submodule "zsh/docker-zsh-completion"]
 	path = zsh/docker-zsh-completion
 	url = https://github.com/felixr/docker-zsh-completion
+[submodule "vim/pack/dist/start/molokai"]
+	path = vim/pack/dist/start/molokai
+	url = https://github.com/tomasr/molokai.git
+[submodule "vim/pack/dist/start/vim-fugitive"]
+	path = vim/pack/dist/start/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive.git
+[submodule "vim/pack/dist/start/vim-quickrun"]
+	path = vim/pack/dist/start/vim-quickrun
+	url = https://github.com/thinca/vim-quickrun.git
+[submodule "vim/pack/dist/start/vim-visualstar"]
+	path = vim/pack/dist/start/vim-visualstar
+	url = https://github.com/thinca/vim-visualstar.git

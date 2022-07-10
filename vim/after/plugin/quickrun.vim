@@ -86,7 +86,7 @@ let g:quickrun_config.xslt = {
 			\ 'exec': ['%c %s %a'],
 			\ }
 
-let g:quickrun_config._ = {'runner': 'vimproc', 'runner/vimproc/updatetime': 10}
+let g:quickrun_config._ = {'runner': 'job'}
 
 if &filetype != 'vim'
 	nnoremap <leader>R :call quickrun#compile()<CR>
@@ -116,3 +116,4 @@ endfunction
 
 cabbrev qr QuickRun -args
 
+silent! map <unique> <Leader>r <Plug>(quickrun)
