@@ -22,3 +22,6 @@
 [submodule "vim/pack/dist/opt/plist.vim"]
 	path = vim/pack/dist/opt/plist.vim
 	url = https://github.com/vim-scripts/plist.vim.git
+[submodule "vim/pack/dist/opt/vim-terraform"]
+	path = vim/pack/dist/opt/vim-terraform
+	url = https://github.com/hashivim/vim-terraform.git
