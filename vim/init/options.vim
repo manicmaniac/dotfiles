@@ -33,7 +33,7 @@ set smartcase
 " 3 tags
 set notagbsearch
 " set taglength=0
-set tags=$HOME/.tags
+set tags=$HOME/.tags,.git/tags
 set tagrelative
 " set notagstack
 " set noshowfulltag
