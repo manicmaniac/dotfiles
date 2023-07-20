@@ -81,8 +81,8 @@ set nohlsearch
 " set nocursorcolumn
 " set nocursorline
 " set colorcolumn=
-" set nospell
-" set spelllang=en
+set spell
+set spelllang=en,cjk
 " set spellfile=
 " set spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
 " set spellsuggest=best
@@ -370,7 +370,7 @@ set noimcmdline
 
 " 25 multi-byte characters
 set encoding=utf-8
-set fileencodings=ucs-bom,ascii,utf-8,iso-2022-jp,euc-jp,cp932,utf-16le,utf-16be,utf-32le,utf-32be,latin1
+set fileencodings=utf-8,iso-2022-jp,euc-jp,cp932,utf-16le,utf-16be,utf-32le,utf-32be,latin1
 set termencoding=utf-8
 " set charconvert=
 " set nodelcombine
