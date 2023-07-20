@@ -34,7 +34,7 @@ let g:quickrun_config.make = {
 
 let g:quickrun_config.objc = {
 	\ 'command': 'clang',
-	\ 'exec': ['%c %s -o %s:p:r -framework Foundation', '%s:p:r %a'],
+	\ 'exec': ['%c %s -o %s:p:r -framework Foundation -framework SystemConfiguration', '%s:p:r %a'],
 	\ 'tempfile': '%{tempname()}.m',
 	\ 'hook/sweep/files': '%S:p:r',
 	\ }
