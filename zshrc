@@ -77,9 +77,6 @@ setopt equals  # =command as `which`
 # aliases
 [[ -f ~/.aliases ]] && source ~/.aliases
 
-# anyenv
-eval "$(anyenv init - zsh)"
-
 # extra files in ~/.zsh/configs/pre , ~/.zsh/configs , and ~/.zsh/configs/post
 # these are loaded first, second, and third, respectively.
 _load_settings() {
@@ -118,4 +115,3 @@ _load_settings "$HOME/.zsh/configs"
 
 # Local config
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
-
