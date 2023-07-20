@@ -1,3 +1,5 @@
+[init]
+  defaultBranch = master
 [push]
   default = current
 [color]
@@ -18,6 +20,7 @@
   delete-branch = !sh -c 'git push origin :refs/heads/$1 && git branch -D $1' -
   discard = checkout --
   graph = log --graph -10 --branches --remotes --tags  --format=format:'%Cgreen%h %Creset- %<(50,trunc)%s (%cN, %cr) %Cred%d' --date-order
+  hash = log --pretty=format:%H
   merge-branch = !git checkout master && git merge @{-1}
   nevermind = !git reset --hard HEAD && git clean -d -f
   pr = !hub pull-request
@@ -54,3 +57,15 @@
   showUntrackedFiles = all
 # [url "git@github.com:"]
 # 	pushinsteadof = https://github.com/
+[filter "lfs"]
+  required = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+[user]
+  name = Ryosuke Ito
+  email = rito.0305@gmail.com
+[advice]
+  detachedHead = false
+[rerere]
+  enabled = true
