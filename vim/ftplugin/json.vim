@@ -9,4 +9,4 @@ elseif executable('ruby')
 elseif executable('python')
 	setlocal formatprg=python\ -m\ json.tool
 endif
-
+set shiftwidth=2

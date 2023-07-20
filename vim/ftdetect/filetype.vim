@@ -18,7 +18,7 @@ autocmd BufRead,BufNewFile *.strings,*.pbxproj setfiletype plist
 autocmd BufRead,BufNewFile *.m set filetype=objc
 
 " cocoapods
-autocmd BufRead,BufNewFile Dangerfile,Fastfile,Gymfile,Podfile,Scanfile,*.podspec setfiletype ruby
+autocmd BufRead,BufNewFile Dangerfile,Fastfile,Gymfile,Matchfile,Podfile,Scanfile,*.podspec setfiletype ruby
 
 " json
 " by default, *.json file is defined as javascript.
@@ -40,3 +40,9 @@ autocmd BufRead,BufNewFile *.offlineimaprc set filetype=dosini
 
 " applescript
 autocmd BufRead,BufNewFile *.applescript set filetype=applescript
+
+" tbd
+autocmd BufRead,BufNewFile *.tbd set filetype=yaml nospell
+
+" terraform
+autocmd BufRead,BufNewFile *.hcl,*.tf packadd! vim-terraform | set filetype=terraform nospell

@@ -3,4 +3,4 @@ if executable('js-beautify')
 elseif executable('uglifyjs')
 	setlocal formatprg=uglifyjs\ --beautify\ --comments\ all
 endif
-
+set shiftwidth=2
