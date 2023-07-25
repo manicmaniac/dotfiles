@@ -57,3 +57,6 @@ $RECYCLE.BIN/
 Session.vim
 .netrwhist
 *~
+
+# direnv
+.envrc

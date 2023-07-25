@@ -46,3 +46,6 @@ autocmd BufRead,BufNewFile *.tbd set filetype=yaml nospell
 
 " terraform
 autocmd BufRead,BufNewFile *.hcl,*.tf packadd! vim-terraform | set filetype=terraform nospell
+
+" direnv
+autocmd BufRead,BufNewFile .envrc set filetype=bash
