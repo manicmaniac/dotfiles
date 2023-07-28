@@ -2,3 +2,5 @@
 
 # Local config
 [[ -r ~/.bash_profile.local ]] && source ~/.bash_profile.local
+
+[[ -r ~/.bashrc ]] && source ~/.bashrc
