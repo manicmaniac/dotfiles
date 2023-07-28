@@ -1,9 +1,6 @@
 [submodule "zsh/zsh-completions"]
 	path = zsh/zsh-completions
 	url = https://github.com/zsh-users/zsh-completions
-[submodule "anyenv"]
-	path = anyenv
-	url = https://github.com/riywo/anyenv
 [submodule "zsh/docker-zsh-completion"]
 	path = zsh/docker-zsh-completion
 	url = https://github.com/felixr/docker-zsh-completion

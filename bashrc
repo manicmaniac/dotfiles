@@ -46,9 +46,6 @@ set bell-style none
 # aliases
 [[ -f ~/.aliases ]] && source ~/.aliases
 
-# anyenv
-eval "$(anyenv init -)"
-
 # extra files in ~/.bash/configs/pre , ~/.bash/configs , and ~/.bash/configs/post
 # these are loaded first, second, and third, respectively.
 _load_settings() {
