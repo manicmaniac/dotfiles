@@ -20,10 +20,6 @@ Also bash can be used:
 
     chsh -s $(which bash)
 
-And ksh:
-
-    chsh -s $(which ksh)
-
 Install
 -------
 

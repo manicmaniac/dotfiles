@@ -64,14 +64,6 @@ describe file '/root/.bashrc' do
   it { is_expected.to be_readable }
 end
 
-describe package 'ksh' do
-  it { is_expected.to be_installed }
-end
-
-describe file '/root/.kshrc' do
-  it { is_expected.to be_readable }
-end
-
 describe package 'zsh' do
   it { is_expected.to be_installed }
 end
