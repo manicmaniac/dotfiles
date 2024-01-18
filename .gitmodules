@@ -22,3 +22,6 @@
 [submodule "vim/pack/dist/opt/vim-terraform"]
 	path = vim/pack/dist/opt/vim-terraform
 	url = https://github.com/hashivim/vim-terraform.git
+[submodule "vim/pack/dist/opt/xcconfig.vim"]
+	path = vim/pack/dist/opt/xcconfig.vim
+	url = https://github.com/keith/xcconfig.vim.git
