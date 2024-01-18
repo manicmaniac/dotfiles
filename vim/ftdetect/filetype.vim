@@ -49,3 +49,6 @@ autocmd BufRead,BufNewFile *.hcl,*.tf packadd! vim-terraform | set filetype=terr
 
 " direnv
 autocmd BufRead,BufNewFile .envrc set filetype=bash
+
+" xcconfig
+autocmd BufRead,BufNewFile *.xcconfig packadd! xcconfig.vim | set filetype=xcconfig
