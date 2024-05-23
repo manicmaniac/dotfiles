@@ -83,6 +83,7 @@ set nohlsearch
 " set colorcolumn=
 set spell
 set spelllang=en,cjk
+set spelloptions=camel
 " set spellfile=
 " set spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
 " set spellsuggest=best
@@ -337,7 +338,7 @@ set noshellslash
 
 " 23 running make and jumping to errors
 " set errorfile=errors.err
-" set errorformat=
+set errorformat+=rspec\ %f:%l\ #\ %m
 " set makeprg=make
 " set shellpipe=2>&1\|\ tee
 " set makeef=

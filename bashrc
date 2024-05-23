@@ -29,7 +29,7 @@ export HISTSIZE=65536
 export HISTFILESIZE=16777216
 export HISTTIMEFORMAT='%y/%m/%d %H:%M:%S '
 export HISTCONTROL=ignoredups
-share_history() { history -a; history -c; history -r; }
+share_history() { history -a; history -c; }
 PROMPT_COMMAND='share_history'
 shopt -u histappend
 

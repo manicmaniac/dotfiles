@@ -19,12 +19,3 @@ augroup autocommands#kill_input_method
 	autocmd!
 	autocmd InsertEnter,InsertLeave * set iminsert=0
 augroup END
-
-augroup autocommands#command_mode
-	autocmd!
-	autocmd CmdwinEnter * nnoremap <silent><buffer> q :quit<CR>
-				\ | nnoremap <silent><buffer> <Esc><Esc> :quit<CR>
-				\ | nnoremap <buffer> <C-S> <Esc>?
-				\ | nnoremap <silent> <C-W>k :quit<CR>
-augroup END
-

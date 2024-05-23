@@ -60,3 +60,10 @@ Session.vim
 
 # direnv
 .envrc
+.direnv/
+
+# Bundler
+**/vendor/bundle/
+
+# byebug
+.byebug_history

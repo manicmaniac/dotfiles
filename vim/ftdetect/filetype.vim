@@ -52,3 +52,6 @@ autocmd BufRead,BufNewFile .envrc set filetype=bash
 
 " xcconfig
 autocmd BufRead,BufNewFile *.xcconfig packadd! xcconfig.vim | set filetype=xcconfig
+
+" ruby
+autocmd BufRead,BufNewFile .Guardfile,.guardrc,Guardfile set filetype=ruby
