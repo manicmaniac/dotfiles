@@ -82,6 +82,7 @@ set nohlsearch
 " set nocursorline
 " set colorcolumn=
 set spell
+set spelloptions=camel
 set spelllang=en,cjk
 set spelloptions=camel
 " set spellfile=
