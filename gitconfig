@@ -10,6 +10,7 @@
   ap = add --patch
   branches = for-each-ref --sort=-committerdate --format=\"%(color:blue)%(authordate:relative)\t%(color:red)%(authorname)\t%(color:white)%(color:bold)%(refname:short)\" refs/remotes
   ca = commit --amend -v
+  can = commit --amend --no-edit
   ci = commit -v
   co = checkout
   co-pr = !sh -c 'git fetch origin pull/$1/head:pr/$1 && git checkout pr/$1' -
@@ -19,6 +20,7 @@
   current-branch = !sh -c 'git rev-parse --abbrev-ref HEAD' -
   delete-branch = !sh -c 'git push origin :refs/heads/$1 && git branch -D $1' -
   discard = checkout --
+  fpush = push --force-with-lease
   graph = log --graph -10 --branches --remotes --tags  --format=format:'%Cgreen%h %Creset- %<(50,trunc)%s (%cN, %cr) %Cred%d' --date-order
   hash = log --pretty=format:%H
   merge-branch = !git checkout master && git merge @{-1}
