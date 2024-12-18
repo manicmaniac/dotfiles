@@ -12,19 +12,20 @@ function! s:check_plist()
 endfunction
 
 " strings, pbxproj
-autocmd BufRead,BufNewFile *.strings,*.pbxproj setfiletype plist
+autocmd BufRead,BufNewFile *.strings,*.pbxproj set filetype=plist nospell
 
 " objc
 autocmd BufRead,BufNewFile *.m set filetype=objc
 
 " cocoapods
-autocmd BufRead,BufNewFile Dangerfile,Fastfile,Gymfile,Matchfile,Podfile,Scanfile,*.podspec setfiletype ruby
+autocmd BufRead,BufNewFile Dangerfile,Fastfile,Gymfile,Matchfile,Podfile,Scanfile,Guardfile,*.podspec setfiletype ruby
 
 " json
 " by default, *.json file is defined as javascript.
 " to override default setting, use set filetype= instaed of
 " setfiletype command.
-autocmd BufRead,BufNewFile *.json set filetype=json
+autocmd BufRead,BufNewFile *.json,*.code-workspace set filetype=json
+autocmd BufRead,BufNewFile Package.resolved set filetype=json nospell
 
 " cython
 autocmd BufRead,BufNewFile *.pyd set filetype=pyrex
