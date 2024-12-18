@@ -1,5 +1,6 @@
 # undef Ctrl-S (lock tty)
 stty stop undef
+disable r
 
 # modify the prompt to contain git branch name if applicable
 git_prompt_info() {
