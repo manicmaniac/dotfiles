@@ -67,3 +67,10 @@ Session.vim
 
 # byebug
 .byebug_history
+
+# aider
+.aider*
+
+.vimrc.local
+
+.claude/settings.local.json

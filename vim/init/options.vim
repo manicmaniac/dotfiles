@@ -81,6 +81,7 @@ set nohlsearch
 " set nocursorcolumn
 " set nocursorline
 " set colorcolumn=
+set regexpengine=2
 set spell
 set spelloptions=camel
 set spelllang=en,cjk
@@ -275,7 +276,7 @@ set expandtab
 
 " 19 reading and writing files
 " set modeline
-" set modelines=5
+set modelines=5
 " set nobinary
 " set endofline
 " set nobomb
