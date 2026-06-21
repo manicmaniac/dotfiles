@@ -379,7 +379,8 @@ set termencoding=utf-8
 " set nodelcombine
 " set maxcombine=2
 " set imactivatekey=
-set ambiwidth=double
+" set ambiwidth=double
+set ambiwidth=single
 
 " 26 various
 " set virtualedit=
