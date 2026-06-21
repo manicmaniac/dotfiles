@@ -71,6 +71,11 @@ let g:quickrun_config.bplist = {
 	\ 'outputter/buffer/filetype': 'plist',
 	\ }
 
+let g:quickrun_config.python = {
+	\ 'command': 'python3',
+	\ 'hook/eval/template': 'print(%s)',
+	\ }
+
 let g:quickrun_config.pyrex = {
 	\ 'command': 'python',
 	\ 'exec': ['%c -m Cython.Build.BuildExecutable %s'],
