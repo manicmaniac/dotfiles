@@ -52,8 +52,6 @@
   template = ~/.gitmessage
 [fetch]
   prune = true
-[include]
-  path = ~/.gitconfig.local
 [status]
   branch = true
   short = true
@@ -72,3 +70,5 @@
   detachedHead = false
 [rerere]
   enabled = true
+[include]
+  path = ~/.gitconfig.local
