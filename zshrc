@@ -18,7 +18,7 @@ export PS1='${SSH_CONNECTION+"%{$fg_bold[red]%}%n@%m:"}%{$fg_bold[green]%}%/%{$r
 fpath=(~/.zsh/zsh-completions/src ~/.zsh/docker-zsh-competion $fpath)
 
 # completion
-autoload -U compinit
+autoload -Uz compinit
 compinit
 setopt auto_list
 setopt auto_menu
