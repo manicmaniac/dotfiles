@@ -24,7 +24,7 @@ autocmd BufRead,BufNewFile Dangerfile,Fastfile,Gymfile,Matchfile,Podfile,Scanfil
 " by default, *.json file is defined as javascript.
 " to override default setting, use set filetype= instaed of
 " setfiletype command.
-autocmd BufRead,BufNewFile *.json,*.code-workspace set filetype=json
+autocmd BufRead,BufNewFile *.json,*.code-workspace,*.apns,Package.resolved set filetype=json
 autocmd BufRead,BufNewFile Package.resolved set filetype=json nospell
 
 " cython
