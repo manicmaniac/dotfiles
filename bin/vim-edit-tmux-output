@@ -1,0 +1,57 @@
+#!/bin/sh
+
+help='Capture the tmux output and edit it in Vim.
+
+Usage:
+  vim-edit-tmux-output [-hcn]
+
+Options:
+  -h --help    Show this help 
+  -c           Copy the output of the last command
+  -n <NUMBER>  Maximum number of lines to edit
+'
+
+copy_command=0
+max_lines=-1000
+while [ $# -gt 0 ]
+do
+    case "$1" in
+        -h|--help)
+            echo "$help"
+            exit
+            ;;
+        -c)
+            shift
+            copy_command=1
+            ;;
+        -n)
+            shift
+            max_lines="$(echo "abs($1) / -1" | bc)"
+            shift
+            ;;
+        *)
+            echo "error: Invalid argument $1." >&2
+            exit 1
+            ;;
+    esac
+done
+
+if [ -z "$TMUX" ]; then
+    echo 'error: $TMUX does not exist.' >&2
+    exit 1
+fi
+
+file="$(mktemp "${TMPDIR}/tmux-capture.XXXXXX")"
+
+if [ $copy_command -eq 1 ]; then
+    tmux capture-pane -p -J -S "$max_lines" \
+        | awk '/ % / { prev_block = block; block=""; next } { block = block $0 "\n" } END { printf "%s", prev_block }' > "$file"
+    tmux load-buffer "$file"
+    if type pbcopy >/dev/null 2>&1; then
+        cat "$file" | perl -pe chomp | pbcopy
+    fi
+else
+    tmux capture-pane -p -J -S "$max_lines" \
+        | perl -0777 -pe 's/\s*\z//'> "$file" 
+    tmux new-window -n "capture" "vim '+set nospell' '+setf shellsession' + \"$file\" && rm \"$file\""
+fi
