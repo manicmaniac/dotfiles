@@ -77,3 +77,5 @@ Session.vim
 .claude/settings.local.json
 */.claude/settings.local.json
 .worktrees/
+
+/.vimrc

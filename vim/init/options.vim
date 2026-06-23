@@ -386,8 +386,8 @@ set ambiwidth=single
 " set virtualedit=
 " set eventignore=
 " set loadplugins
-" set noexrc
-" set nosecure
+set exrc
+set secure
 " set nogdefault
 " set noedcompatible
 " set maxfuncdepth=100
