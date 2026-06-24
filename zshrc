@@ -19,7 +19,12 @@ fpath=(~/.zsh/zsh-completions/src ~/.zsh/docker-zsh-competion $fpath)
 
 # completion
 autoload -Uz compinit
-compinit
+# Regenerate dump at most once per day; skip compaudit otherwise
+if [[ -n ~/.zcompdump(#qN.mh+24) ]]; then
+  compinit
+else
+  compinit -C
+fi
 setopt auto_list
 setopt auto_menu
 setopt list_packed
