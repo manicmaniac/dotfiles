@@ -15,7 +15,7 @@ setopt promptsubst
 export PS1='${SSH_CONNECTION+"%{$fg_bold[red]%}%n@%m:"}%{$fg_bold[green]%}%/%{$reset_color%}$(git_prompt_info) %# '
 
 # load our own completion functions
-fpath=(~/.zsh/zsh-completions/src ~/.zsh/docker-zsh-competion ~/.zsh/zsh-xcode-completions/src $fpath)
+fpath=(~/.zsh/zsh-completions/src ~/.zsh/docker-zsh-completion ~/.zsh/zsh-xcode-completions/src $fpath)
 
 # completion
 autoload -Uz compinit
