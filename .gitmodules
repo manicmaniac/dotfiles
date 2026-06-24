@@ -28,3 +28,6 @@
 [submodule "vim/pack/dist/opt/AnsiEsc.vim"]
 	path = vim/pack/dist/opt/AnsiEsc.vim
 	url = https://github.com/vim-scripts/AnsiEsc.vim.git
+[submodule "zsh/zsh-xcode-completions"]
+	path = zsh/zsh-xcode-completions
+	url = https://github.com/keith/zsh-xcode-completions.git
