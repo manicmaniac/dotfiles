@@ -79,3 +79,5 @@ Session.vim
 .worktrees/
 
 /.vimrc
+
+**/.claude/.cc-writes/
