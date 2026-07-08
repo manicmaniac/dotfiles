@@ -1,7 +1,7 @@
 dotfiles
 ========
 
-[![Build Status](https://travis-ci.org/manicmaniac/dotfiles.svg?branch=master)](https://travis-ci.org/manicmaniac/dotfiles)
+[![Build Status](https://github.com/manicmaniac/dotfiles/actions/workflows/test.yml/badge.svg)](https://github.com/manicmaniac/dotfiles/actions/workflows/test.yml)
 
 Introduction
 ------------
@@ -69,8 +69,4 @@ in this project.
 License
 -------
 
-dotfiles is copyright © 2009-2015 thoughtbot. It is free software, and may be
-redistributed under the terms specified in the [`LICENSE`] file.
-
-[`LICENSE`]: /LICENSE
-
+See the [LICENSE](./LICENSE)
