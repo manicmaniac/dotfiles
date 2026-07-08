@@ -18,5 +18,5 @@ jobs:
         env:
           DOCKER_CONTAINER_ID: ${{ env.CONTAINER_ID }}
       - name: Cleanup container
-        if: always()
+        if: ${{ always() && env.CONTAINER_ID != '' }}
         run: docker rm -f ${{ env.CONTAINER_ID }}
