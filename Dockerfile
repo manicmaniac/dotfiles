@@ -1,10 +1,20 @@
 FROM debian:trixie
-MAINTAINER Ryosuke Ito <rito.0305@gmail.com>
+LABEL maintainer="Ryosuke Ito <rito.0305@gmail.com>"
 
-WORKDIR /root
-RUN apt-get update && apt-get install -y git tmux tig vim wget zsh gcc make editorconfig rcm && apt-get autoremove -y
-ADD . dotfiles
+RUN apt-get update && apt-get install -y git tmux tig vim wget zsh gcc make editorconfig rcm ruby && apt-get autoremove -y
+RUN gem install --no-document bundler
+
+RUN groupadd -g 1001 user && useradd -u 1001 -g user -d /home/user -m -s /usr/bin/zsh user
+
+ADD --chown=user:user . /home/user/dotfiles
+
+USER user
+WORKDIR /home/user
+
+ENV BUNDLE_PATH=/home/user/dotfiles/vendor/bundle
+RUN bundle install --gemfile=/home/user/dotfiles/Gemfile
 RUN mkdir .dotfiles.original && mv .bashrc .profile .dotfiles.original
-RUN env USER=root RCRC=dotfiles/rcrc rcup || true
-RUN /usr/bin/chsh -s /usr/bin/zsh
+ENV RCRC=/home/user/dotfiles/rcrc
+RUN rcup || true
+
 ENTRYPOINT ["/usr/bin/zsh"]
