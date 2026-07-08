@@ -1,4 +1,4 @@
-FROM debian:bullseye
+FROM debian:trixie
 MAINTAINER Ryosuke Ito <rito.0305@gmail.com>
 
 WORKDIR /root
