@@ -13,8 +13,8 @@ apply_patch() {
 
 touch $HOME/.psqlrc.local
 
-# build .less from .lesskey
-if type lesskey >/dev/null 2>&1; then
+# build .less from .lesskey for less < 582
+if type lesskey >/dev/null 2>&1 && [ "$(lesskey --version | grep -m1 -o '[0-9][0-9]*')" -lt 582 ]; then
     lesskey -o $HOME/.less -- $HOME/.lesskey
 fi
 
