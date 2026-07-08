@@ -1,0 +1,22 @@
+name: test
+on: push
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true
+      - name: Build Docker image
+        run: docker build -t test-target .
+      - name: Start Docker container
+        id: start-container
+        run: printf 'CONTAINER_ID=%s' "$(docker run -td test-target)" >> "$GITHUB_ENV"
+      - name: Run tests
+        run: bundle exec rspec
+        env:
+          DOCKER_CONTAINER_ID: ${{ env.CONTAINER_ID }}
+      - name: Cleanup container
+        if: always()
+        run: docker rm -f ${{ env.CONTAINER_ID }}

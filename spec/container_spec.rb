@@ -141,3 +141,7 @@ end
 describe file '/home/user/.docs' do
   it { is_expected.not_to exist }
 end
+
+describe file '/home/user/.github' do
+  it { is_expected.not_to exist }
+end
